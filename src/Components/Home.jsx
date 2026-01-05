@@ -1,5 +1,6 @@
 import React from 'react'
 import Cards from './Props.jsx'
+import State from './State.jsx'
 
 const Button = () => {
     return (
@@ -24,6 +25,9 @@ const Home = () => {
         <Cards name="John" age={30} />
         <Cards name="Jane" age={25} />
         <Cards name="Bob" age={35} />
+        <br />
+        <State />
+        
         </>
     )
 }
