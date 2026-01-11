@@ -9,6 +9,7 @@ import Effect from "../Hooks/Effect.jsx";
 import Ref from "../Hooks/Ref.jsx";
 import Memo from "../Hooks/Memo.jsx";
 import Reducer from "../Hooks/Reducer.jsx"
+import Callback from "../Hooks/Callback.jsx"
 import { ThemeContext } from "../App.jsx";
 
 // import AddMessage from '../Message/AddMessage.jsx'
@@ -112,11 +113,18 @@ const themeStyles = useContext(ThemeContext);
             >
               Reducer
             </button>
+            <button
+              onClick={() => setPage("Callback")}
+              className="m-3 p-3 bg-green-500 text-white rounded cursor-pointer"
+            >
+              Callback
+            </button>
             {page === "Memo" && <Memo Animate={Animate} />}
             {/* {page === "Form_Status" && <Form_Status />} */}
             {page === "Effect" && <Effect />}
             {page === "Ref" && <Ref />}
             {page === "Reducer" && <Reducer />}
+            {page === "Callback" && <Callback />}
 
           </nav>
         </ThemeContext.Provider>
