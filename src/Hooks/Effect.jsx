@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState, useContext } from "react";
-import {ThemeContext} from "../Components/Home.jsx";
+import {ThemeContext} from "../App.jsx";
 
 // let id = 1;
 
@@ -37,7 +37,7 @@ const theme = useContext(ThemeContext);
   return (
     <>
       <h1>This is Effect Hook Page</h1>
-      <div className="card m-5 p-5 border-2 rounded shadow-lg" style={theme}>
+      <div className="card m-5 p-5 border-2 rounded shadow-lg" style={theme.Border}>
         <h1>{products.title}</h1>
         <img src={products.thumbnailUrl} alt={products.title} className="w-52 h-52" />
         <a href={products.url} className="mt-2 px-4 py-2 text-blue-500 cursor-pointer">Click here ...</a>
